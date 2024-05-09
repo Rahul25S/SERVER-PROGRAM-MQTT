@@ -1,0 +1,20 @@
+# MQTT Publish Demo
+# Publish two messages, to two different topics
+import time
+import paho.mqtt.publish as publish
+publish.single("ETS/IOTKIT/RELAY", "ON1", hostname="test.mosquitto.org")
+time.sleep(5)
+publish.single("ETS/IOTKIT/RELAY", "OFF1", hostname="test.mosquitto.org")
+time.sleep(5)
+publish.single("ETS/IOTKIT/RELAY", "ON2", hostname="test.mosquitto.org")
+time.sleep(5)
+publish.single("ETS/IOTKIT/RELAY", "OFF2", hostname="test.mosquitto.org")
+time.sleep(5)
+publish.single("ETS/IOTKIT/RELAY", "ON3", hostname="test.mosquitto.org")
+time.sleep(5)
+publish.single("ETS/IOTKIT/RELAY", "OFF3", hostname="test.mosquitto.org")
+time.sleep(5)
+
+#publish.single("CoreElectronics/test", "hello", hostname="test.mosquitto.org")
+#print publish.single("CoreElectronics/topic", "world", hostname="test.mosquitto.org")
+print("Done")
